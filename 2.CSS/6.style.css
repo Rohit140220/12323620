@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    border: 2px solid grey;
+}
+
+div{
+    margin: 25px;/*space outside the border(pushes other element away)*/
+    border: 2px solid red;
+    padding: 30px 20px 10px; /* Space between content and border(inside) */
+}
