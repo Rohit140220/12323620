@@ -1,0 +1,25 @@
+section{
+    width: 80vh;
+    margin: 20px auto;
+    display: grid;
+
+
+    /* 1. defining cols and rows */
+    /* grid-template-columns: 250px 250px 250px; */
+    /* grid-template-rows: 250px 250px 250px; */
+    grid-template-columns: repeat(3,250px);
+
+    /* 2.grid height */
+    grid-auto-rows: 200px;
+
+    /* 3. to create gap btw boxes */
+    /* row-gap: 20px; */
+    gap: 20px 10px;
+
+    /* 4. divide into fractions */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4,1fr); */
+
+    /* 5. for responsive grid */
+    grid-template-columns: repeat(auto-fill, max(250px,1fr));
+}
