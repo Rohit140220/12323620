@@ -1,0 +1,29 @@
+/* Combinator Seclectors are total 4 */
+
+/* 1.decendent combinator selector: Select all <a> tags that are inside <li> which are inside <ul> */
+ul li a{
+    color: brown;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/* 2. child combinator selector: Select only those <li> which are directly children of <ol>*/
+ol > li{
+    background-color: yellow;
+}
+
+
+/* 3.  adjacent combinator selector: select only the 1st <p> which comes immediately after <h3> */
+h3+p{
+    border-top: 2px solid blue;
+    background-color: aqua;
+}
+
+
+
+/* 4.  general combinator selector: */
+div~p{
+    color:green;
+    font-size: 30px;
+}
