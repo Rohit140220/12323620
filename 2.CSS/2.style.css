@@ -1,0 +1,37 @@
+/* 1. universal selector */
+*{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 2. Id selector */
+#fruits{
+    color: orange;
+    border: 2px dotted blue;
+}
+
+
+/* 3. Class selector */
+.a{
+    color: green;
+    text-decoration: line-through red;
+    font-weight: 800;
+}
+
+/* 4. Element selector */
+p{
+    background-color: pink;
+}
+
+/* 5. Attribute selector */
+input[type=text]{
+    background-color: aqua;
+}
+
+[type=password]{
+    background-color: violet;
+}
+
+[placeholder="email"]{
+    background-color: antiquewhite;
+}
