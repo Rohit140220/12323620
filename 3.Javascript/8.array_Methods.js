@@ -3,6 +3,28 @@ let student = ["Shiva", "1160361", "83%", "Lovely Professional University"];
 
 let car = ["audi", "bmw", "maruti", "nano"];
 
+// sort: sorts an array:it doesnt sort numbers or letters in ascending order. it sort as per that character or letter associated string value
+let letters = ["a", "d", "i", "c", "b"];
+console.log(letters.sort());
+let num = [1, 10, 16, 21, 2, 20];
+console.log(num.sort());
+
+// 10.splice: it is used to replace/ removing and adding a new element in an array
+let fruit = ["apple", "bananas", "guava", "pineapple"];
+
+console.log(fruit.splice(0, 1, "grapes", "lemon", "kin"));
+console.log(fruit);
+
+console.log(fruit.splice(0, 1));
+console.log(fruit.splice(3)); // it removes from index 3 to the end of the array
+
+// 9.slice: copies a portion of an array:
+let letter = ["a", "b", "c", "d", "e", "f"];
+console.log(letter.slice(-2));
+console.log(letter.slice(2, 5));
+console.log(letter.slice(2));
+console.log(letter.slice());
+
 // 8.reverse: reverse an array:
 let rev = [1, 2, 3, 4, 5];
 console.log(rev.reverse());
