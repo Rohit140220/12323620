@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Heading</title>
+</head>
+
+<body>
+
+
+    <!-- JS Implementation -->
+
+    <script>
+        // 1. creating elements in DOm:
+        var heading = document.createElement("h1")// upto this point element has been created in memory only(but not visible)
+
+        // 2.1: Add class to element:
+        heading.className = "title";
+        // 2.2:add id to element:
+        heading.id = "firstId";
+        console.log(heading)
+
+        // 3:Applying style:
+        heading.style.backgroundColor = "orange";
+        heading.style.padding = "10px";
+
+        // 4.creating textNode:
+        const text = document.createTextNode("Javascript: DOM is Awesome")
+
+        //5. Append textNode inside the element: h1-Javascript: DOM is Awesome
+        heading.appendChild(text);
+        console.log(heading)
+
+        // 6.Now we will append it to document:
+        document.body.appendChild(heading)
+    </script>
+
+</body>
+
+</html>
