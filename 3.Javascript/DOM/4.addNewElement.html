@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Add New Element</title>
+</head>
+
+<body style="background-color: grey;">
+    <center>
+        <div class="weeks" style="font-size: large;">
+            <div class="days">Monday</div>
+            <div class="days">Tuesday</div>
+            <div class="days">Wednesday</div>
+        </div>
+    </center>
+
+    <script>
+
+        //A. Accesing Parent,child,siblings:
+        // 1.selecting parent container:
+        const week = document.querySelector(".weeks");
+        console.log(week); // this will selecte whole div.weeks
+
+        // 2. HTMLcollectionof childs divs:
+        console.log(week.children)
+
+        // 3. Specific child: Second child---> Tuesday we are selecting
+        console.log(week.children[1].innerHTML)
+
+
+        // B. Parent ---> child
+        console.log(week.firstElementChild);// monday
+        console.log(week.lastElementChild);//wednesday
+
+        // C. child ---> Parent:
+        const firstDays = document.querySelector(".days");
+        console.log(firstDays);
+        console.log(firstDays.parentElement);
+
+        // D. sibling: 
+        console.log(firstDays.nextElementSibling) // sibling next --> tuesday
+        console.log(firstDays.nextElementSibling.nextElementSibling) // sibling next --> wednesday
+        console.log(firstDays.nextElementSibling.nextElementSibling) // sibling next --> wednesday
+        console.log(firstDays.previousElementSibling) // sibling next --> wednesday
+
+
+    </script>
+
+</body>
+
+</html>
