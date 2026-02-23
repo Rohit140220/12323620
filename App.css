@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3e5f5; /* Very light purple background */
+  color: #333;
+}
+
+/* --- Login Styles --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4a148c; /* Deep purple */
+}
+
+.login-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 1.5rem;
+}
+
+.login-form input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ce93d8;
+  border-radius: 4px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #8e24aa;
+}
+
+.login-form button, .btn-primary {
+  padding: 0.8rem;
+  background-color: #8e24aa; /* Vibrant purple */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.login-form button:hover, .btn-primary:hover {
+  background-color: #6a1b9a;
+}
+
+/* --- Layout & Topbar --- */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a148c;
+  color: white;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topbar-logo strong {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  background: transparent;
+  color: #e1bee7;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  color: white;
+  background-color: #6a1b9a;
+}
+
+.nav-button.active {
+  color: white;
+  background-color: #8e24aa;
+  font-weight: bold;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.role-badge {
+  background-color: #ce93d8;
+  color: #4a148c;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #ff8a80;
+  color: #ff8a80;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background: #ff8a80;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Stats Layout (Home) --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  border-top: 4px solid #8e24aa;
+}
+
+.stat-card h3 {
+  color: #4a148c;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-success { color: #2e7d32; }
+.text-warning { color: #f57f17; }
+.text-purple { color: #8e24aa; }
+
+/* --- CRM Module & Tables --- */
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.module-header h2 {
+  color: #4a148c;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th, .data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f3e5f5;
+}
+
+.data-table th {
+  background-color: #f3e5f5;
+  color: #4a148c;
+  font-weight: 600;
+}
+
+.btn-edit {
+  background: #ba68c8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background: #ef5350;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.status.active { background: #dcedc8; color: #33691e; }
+.status.pending { background: #fff9c4; color: #f57f17; }
