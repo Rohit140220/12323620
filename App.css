@@ -436,3 +436,76 @@ body {
 
 /* New Status Color */
 .status.closed { background: #f5f5f5; color: #616161; }
+
+/* --- Reports Module Styles --- */
+
+.generator-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(106, 27, 154, 0.1);
+  border-left: 5px solid #8e24aa;
+  margin-bottom: 2rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.report-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e1bee7;
+  padding-bottom: 0.5rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #888;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  color: #8e24aa;
+  background: #f3e5f5;
+}
+
+.tab-button.active {
+  color: #4a148c;
+  background: #e1bee7;
+  border-bottom: 3px solid #4a148c;
+}
+
+.btn-action {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-action.download:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.btn-action.delete {
+  border-color: #ffcdd2;
+}
+
+.btn-action.delete:hover {
+  background: #ffebee;
+  border-color: #f44336;
+}
+
+/* Specific Category Badges for Reports */
+.status.sales { background: #e8f5e9; color: #2e7d32; }
+.status.system { background: #ede7f6; color: #4527a0; }
+.status.analytics { background: #e3f2fd; color: #1565c0; }
