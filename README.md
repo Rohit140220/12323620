@@ -1,51 +1,16 @@
-# Customer Relationship Management (CRM) System
+# React + Vite
 
-A robust, role-based Customer Relationship Management system featuring full CRUD capabilities, secure authentication, and distinct access levels for administrators and standard users. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Project Purpose
+Currently, two official plugins are available:
 
-This project implements a secure CRM backend where administrators manage master data and standard users perform day-to-day operations. The system uses JSON Web Tokens (JWT) to secure all routes, with custom role-based middleware to strictly restrict administrative operations to authorized personnel.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## ✨ Key Features
+## React Compiler
 
-* **Role-Based Access Control (RBAC):** Distinct permissions for `Admin` and `User` roles.
-* **Secure Authentication:** Password hashing and JWT-based session management.
-* **Full CRUD Operations:** Complete Create, Read, Update, and Delete capabilities for CRM records.
-* **Protected Routes:** Custom middleware verifies token validity and user roles before granting access to specific endpoints.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🗂️ Main Modules / Collections
+## Expanding the ESLint configuration
 
-The system is built around four primary data modules:
-
-1.  **Users:** Handles user profiles, roles (`Admin` / `User`), and authentication credentials.
-2.  **CRM:** Core customer data, interactions, and management records.
-3.  **Reports:** Generated analytics and system usage data.
-4.  **Settings:** Global application configurations and master data (Admin only).
-
-## 🔒 JWT Authentication Flow
-
-The security of the application follows a standard token-based architecture:
-
-1.  **Registration:** User registers account -> Password is cryptographically hashed -> Saved in the database.
-2.  **Authentication:** User logs in with credentials -> Server validates and generates a JWT.
-3.  **Storage:** The client receives the JWT and stores it locally (e.g., in `localStorage` or a secure cookie).
-4.  **Transmission:** The token is sent in the `Authorization` header (`Bearer <token>`) for every subsequent HTTP request.
-5.  **Verification:** Backend middleware intercepts the request, verifying both token validity and the user's role.
-6.  **Resolution:** If valid, the request proceeds. If invalid, tampered, or lacking permissions, the server returns a `401 Unauthorized` or `403 Forbidden` error.
-
-## 🔌 API Endpoints Reference
-
-Below are the sample REST APIs for the core CRM module. All endpoints require a valid JWT.
-
-| Method | Endpoint | Description | Role Required |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/api/crm` | Create a new CRM record | User / Admin |
-| `GET` | `/api/crm` | Retrieve all CRM records | User / Admin |
-| `PUT` | `/api/crm/:id` | Update an existing CRM record | User / Admin |
-| `DELETE`| `/api/crm/:id` | Delete a specific CRM record | Admin |
-
-## 🛠️ Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
