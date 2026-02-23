@@ -246,3 +246,113 @@ body {
 
 .status.active { background: #dcedc8; color: #33691e; }
 .status.pending { background: #fff9c4; color: #f57f17; }
+
+/* --- Enhanced Dashboard Layout (Home) --- */
+
+.welcome-banner {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(106, 27, 154, 0.2);
+}
+
+.welcome-banner h2 {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.welcome-banner p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.stat-subtitle {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.trend-up { color: #2e7d32; font-weight: bold; }
+.trend-down { color: #c62828; font-weight: bold; }
+
+/* Dashboard Bottom Widgets */
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.widget-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid #ce93d8;
+}
+
+.widget-card h3 {
+  color: #4a148c;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #f3e5f5;
+  padding-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* Activity List */
+.activity-list {
+  list-style: none;
+}
+
+.activity-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3e5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-time {
+  color: #888;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* Progress Bars */
+.progress-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #4a148c;
+  font-weight: 600;
+}
+
+.progress-bar-bg {
+  background: #f3e5f5;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: #8e24aa; /* Default purple */
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
